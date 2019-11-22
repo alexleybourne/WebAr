@@ -36,21 +36,31 @@
 
 
 <body style='margin : 0px; overflow: hidden;'>
-        <a-scene embedded arjs='sourceType: webcam; debugUIEnabled: false;' >
+        <a-scene embedded arjs='trackingMethod: best; sourceType: webcam; debugUIEnabled: false;' hidden>
+        <a-assets>
+            <a-asset-item id="diamond_obj" src="diamond.obj"></a-asset-item>
+            <a-asset-item id="diamond_mtl" src="diamond.mtl"></a-asset-item>
+        </a-assets>
+        
 
-        <a-marker preset="hiro">
-                
-<!--   banner -->
-  <a-box color="blue" position="0 1 0" rotation="0 0 0" depth="0.1" height="0.5" width="2"></a-box>
-  <a-text value="IT WORKS !!" position="-0.8 1 0.1" width="6" color="white"></a-text>
-  
-        </a-marker>
+      <a-marker preset="hiro">
 
-        <a-entity camera></a-entity>
-        </a-scene>
+
+            <a-entity light="type: hemisphere; color: #fefddd; groundColor: #fefddd; intensity: 1.2"></a-entity>
+            <a-entity obj-model="obj: #diamond_obj; mtl: #diamond_mtl"></a-entity>
+
+
+            <!-- <a-entity
+                gltf-model="#animated-asset"
+                scale="1">
+            </a-entity> -->
+
+        <!-- <a-image src="https://media-exp1.licdn.com/media-proxy/ext?w=800&h=800&hash=52Cl6ZfNnJRQGXzl7hCMI9CAptM%3D&ora=1%2CaFBCTXdkRmpGL2lvQUFBPQ%2CxAVta5g-0R6nmgkVjBEk5KeUoAGz60oISIPETTGjWyW1-8_-FAKdIZWEKPLHoxp_HCtkwWtDf43vXmqhR8Q"></a-image> -->
+      </a-marker>
+      <a-entity camera></a-entity>
+    </a-scene>
   </body>
 </html>
 
 
 <!-- <a-entity obj-model="obj: url(diamond.obj); mtl: url(diamond.mtl)"></a-entity> -->
-<!-- <a-image src="https://media-exp1.licdn.com/media-proxy/ext?w=800&h=800&hash=52Cl6ZfNnJRQGXzl7hCMI9CAptM%3D&ora=1%2CaFBCTXdkRmpGL2lvQUFBPQ%2CxAVta5g-0R6nmgkVjBEk5KeUoAGz60oISIPETTGjWyW1-8_-FAKdIZWEKPLHoxp_HCtkwWtDf43vXmqhR8Q"></a-image> -->

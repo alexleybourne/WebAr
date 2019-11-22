@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<a-marker-camera lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Web AR Test</title>
+
+    <!-- Booty Strap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css" >
+</head>
+<html>
+
+    <script src="https://aframe.io/releases/0.9.2/aframe.min.js"></script>
+    <script src="https://raw.githack.com/jeromeetienne/AR.js/2.0.8/aframe/build/aframe-ar.js"></script>
+      <body style='margin : 0px; overflow: hidden;'>
+        <a-scene embedded arjs>
+          <a-marker preset="hiro">
+              <a-box position='0 0.5 0' material='color: yellow;'></a-box>
+          </a-marker>
+          <a-entity camera></a-entity>
+        </a-scene>
+      </body>
+
+    <nav class="navbar navbar-expand-md fixed-top bg-primary">
+            <a class="navbar-brand" style="color: white; font-size: 20px;" href="#">
+                    <img src="Ar_Icon.png"  style="margin: 0 10px 0 0;" alt="Icon" width="40" height="40">
+                    Web AR Test
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="btn btn-outline-light" style="margin: 10px;" href="index.html"> Back <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="btn btn-outline-light" style="margin: 10px;" href="Marker.html">Marker</a>
+                </li>
+                </ul>
+        </div>
+    </nav>
+</html>
